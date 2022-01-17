@@ -1,13 +1,14 @@
 package com.example;
 
-public class Customer {
-
+public class Customer
+{
     private String firstName;
     private String lastName;
     private TimeDepositAccount[] accounts;
     private int numberOfAccounts;
 
-    public Customer(String f, String l) {
+    public Customer(String f, String l)
+    {
         firstName = f;
         lastName = l;
         // initialize accounts array
@@ -15,24 +16,29 @@ public class Customer {
         numberOfAccounts = 0;
     }
 
-    public String getFirstName() {
+    public String getFirstName()
+    {
         return firstName;
     }
 
-    public String getLastName() {
+    public String getLastName()
+    {
         return lastName;
     }
 
-    public void addAccount(TimeDepositAccount acct) {
+    public void addAccount(TimeDepositAccount acct)
+    {
         int i = numberOfAccounts++;
         accounts[i] = acct;
     }
 
-    public int getNumOfAccounts() {
+    public int getNumOfAccounts()
+    {
         return numberOfAccounts;
     }
 
-    public TimeDepositAccount getAccount(int account_index) {
+    public TimeDepositAccount getAccount(int account_index)
+    {
         return accounts[account_index];
     }
 }

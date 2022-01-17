@@ -2,9 +2,10 @@ package com.example;
 
 import java.util.Calendar;
 
-public class AbstractBankingMain {
-
-    public static void main(String[] args) {
+public class AbstractBankingMain
+{
+    public static void main(String[] args)
+    {
         Bank bank = new Bank();
         initializeCustomers(bank);
 

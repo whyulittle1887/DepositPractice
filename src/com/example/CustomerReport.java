@@ -1,25 +1,28 @@
 package com.example;
 
-public class CustomerReport {
-
+public class CustomerReport
+{
     private Bank bank;
 
-    public Bank getBank() {
+    public Bank getBank()
+    {
         return bank;
     }
 
-    public void setBank(Bank bank) {
+    public void setBank(Bank bank)
+    {
         this.bank = bank;
     }
 
-    public void generateReport() {
-
+    public void generateReport()
+    {
         // Print report header
         System.out.println("\t\t\tCUSTOMERS REPORT");
         System.out.println("\t\t\t================");
 
         // For each customer...
-        for (int cust_idx = 0; cust_idx < bank.getNumOfCustomers(); cust_idx++) {
+        for (int cust_idx = 0; cust_idx < bank.getNumOfCustomers(); cust_idx++)
+        {
             Customer customer = bank.getCustomer(cust_idx);
 
             // Print the customer's name
@@ -29,7 +32,8 @@ public class CustomerReport {
                     + customer.getFirstName());
 
             // For each TimeDepositAccount for this customer...
-            for (int acct_idx = 0; acct_idx < customer.getNumOfAccounts(); acct_idx++) {
+            for (int acct_idx = 0; acct_idx < customer.getNumOfAccounts(); acct_idx++)
+            {
                 TimeDepositAccount account = customer.getAccount(acct_idx);
 
                 // Print the current balance of the account
