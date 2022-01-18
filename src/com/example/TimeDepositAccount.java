@@ -2,33 +2,20 @@ package com.example;
 
 import java.util.Date;
 
-public class TimeDepositAccount
+public class TimeDepositAccount extends Account
 {
-    private double balance;
+    // Time related member
     private final Date maturityDate;
-    
+
+    // Time-related member
     public TimeDepositAccount(double balance, Date maturityDate)
     {
-        this.balance = balance;
+        super(balance);
         this.maturityDate = maturityDate;
     }
-    
-    public double getBalance()
-    {
-        return balance;
-    }
-    
-    public void deposit(double amount)
-    {
-        balance += amount;
-    }
-    
-    @Override
-    public String toString()
-    {
-        return getDescription() + ": current balance is " + balance;
-    }
 
+    @Override
+    // Time-related member
     public boolean withdraw(double amount)
     {
         Date today = new Date();
@@ -50,6 +37,8 @@ public class TimeDepositAccount
         }
     }
 
+    @Override
+    // Time-related member
     public String getDescription()
     {
         return "Time Deposit Account " + maturityDate;
